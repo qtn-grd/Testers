@@ -607,7 +607,7 @@ void    test_strjoin(void)
     printf("%s\n", ft_strjoin(str4, str2));
 }
 
-void    test_strlcat(void)
+/*void    test_strlcat(void)
 {
     char    str1[20] = "ZZZZZZZ";
     char    str2[20] = "ZZZZZZZ";
@@ -621,36 +621,37 @@ void    test_strlcat(void)
     printf("\n\nTESTS de la FT_STRLCAT avec comparatifs\n\n");
 
 	printf("\nTEST 1 : concat avec place suffisante\n");
-    i = ft_strlcat(str1, "prout", (size_t)3);
-    j = strlcat(str2, "prout", (size_t)3);
+    i = ft_strlcat(str1, "prout", 3);
+    j = strlcat(str2, "prout", 3);
     printf("%zu\n", i);
     printf("%zu\n", j);
     printf("\nTEST 2 : concat avec size nulle\n");
-    i = ft_strlcat(str1, "prout", (size_t)0);
-    j = strlcat(str2, "prout", (size_t)0);
+    i = ft_strlcat(str1, "prout", 0);
+    j = strlcat(str2, "prout", 0);
     printf("%zu\n", i);
     printf("%zu\n", j);
     printf("\nTEST 3 : concat avec size trop importante\n");
-    i = ft_strlcat(str1, "prout prout", (size_t)20);
-    j = strlcat(str2, "prout prout", (size_t)20);
+    i = ft_strlcat(str1, "prout prout", 20);
+    j = strlcat(str2, "prout prout", 20);
     printf("%zu\n", i);
     printf("%zu\n", j);
     printf("\nTEST 4 : concat avec rien à copier\n");
-    i = ft_strlcat(str1, "", (size_t)5);
-    j = strlcat(str2, "", (size_t)5);
+    i = ft_strlcat(str1, "", 5);
+    j = strlcat(str2, "", 5);
     printf("%zu\n", i);
     printf("%zu\n", j);
 //      printf("\nTEST 5 : CAS INTERDIT concat avec dest trop petite\n");
-//      i = ft_strlcat(str3, "prout", (size_t)5);
-//      j = strlcat(str4, "prout", (size_t)5);
+//      i = ft_strlcat(str3, "prout", 5);
+//      j = strlcat(str4, "prout", 5);
 //      printf("%zu\n", i);
 //      printf("%zu\n", j);
 //      printf("\nTEST 6 : CAS INTERDIT concat avec dest nulle\n");
-//      i = ft_strlcat(str3, "prout", (size_t)5);
-//      j = strlcat(str4, "prout", (size_t)5);
+//      i = ft_strlcat(str3, "prout", 5);
+//      j = strlcat(str4, "prout", 5);
 //      printf("%zu\n", i);
 //      printf("%zu\n", j);
 }
+
 
 void    test_strlcpy(void)
 {
@@ -663,36 +664,37 @@ void    test_strlcpy(void)
 
     printf("\nTESTS FT_STRLCPY avec comparatifs\n\n");
     printf("TEST 1 : copie avec place suffisante\n");
-    i = ft_strlcpy(str1, "prout", (size_t)3);
-    j = strlcpy(str2, "prout", (size_t)3);
+    i = ft_strlcpy(str1, "prout", 3);
+    j = strlcpy(str2, "prout", 3);
     printf("%zu\n", i);
     printf("%zu\n", j);
     printf("TEST 2 : copie avec size nulle\n");
-    i = ft_strlcpy(str1, "prout", (size_t)0);
-    j = strlcpy(str2, "prout", (size_t)0);
+    i = ft_strlcpy(str1, "prout", 0);
+    j = strlcpy(str2, "prout", 0);
     printf("%zu\n", i);
     printf("%zu\n", j);
     printf("TEST 3 : copie avec size trop importante\n");
-    i = ft_strlcpy(str1, "prout prout", (size_t)20);
-    j = strlcpy(str2, "prout prout", (size_t)20);
+    i = ft_strlcpy(str1, "prout prout", 20);
+    j = strlcpy(str2, "prout prout", 20);
     printf("%zu\n", i);
     printf("%zu\n", j);
     printf("TEST 4 : copie avec rien à copier\n");
-    i = ft_strlcpy(str1, "", (size_t)5);
-    j = strlcpy(str2, "", (size_t)5);
+    i = ft_strlcpy(str1, "", 5);
+    j = strlcpy(str2, "", 5);
     printf("%zu\n", i);
     printf("%zu\n", j);
 //  printf("TEST 5 : copie de source nulle\n");
-//  i = ft_strlcpy(str1, NULL, (size_t)5);
-//  j = strlcpy(str2, NULL, (size_t)5);
+//  i = ft_strlcpy(str1, NULL, 5);
+//  j = strlcpy(str2, NULL, 5);
 //  printf("%zu\n", i);
 //  printf("%zu\n", j);
 //  printf("TEST 6 : copie avec dest nulle\n");
-//  i = ft_strlcpy(str3, "prout", (size_t)5);
-//  j = strlcpy(str4, "prout", (size_t)5);
+//  i = ft_strlcpy(str3, "prout", 5);
+//  j = strlcpy(str4, "prout", 5);
 //  printf("%zu\n", i);
 //  printf("%zu\n", j);
 }
+*/
 
 void	test_strlen(void)
 {
@@ -784,7 +786,7 @@ void    test_strncmp(void)
 	// printf("%d\n", ft_strncmp(NULL, str2, 5));
     // printf("%d\n\n", strncmp(NULL, str2, 5));
 }
-
+/*
 void    test_strnstr(void)
 {
     char    *big1 = "C'est la fête ce soir";
@@ -795,30 +797,31 @@ void    test_strnstr(void)
     printf("\n\nTESTS de la FT_STRNSTR avec comparatifs\n\n");
         
     printf("\nTest 1 version avant aiguille\n\n");
-    printf("%s\n", ft_strnstr(big1, little1, (size_t)3));
-    printf("%s\n", strnstr(big1, little1, (size_t)3));
+    printf("%s\n", ft_strnstr(big1, little1, 3));
+    printf("%s\n", strnstr(big1, little1, 3));
     printf("\nTest 2 version pendant aiguille\n\n");
-    printf("%s\n", ft_strnstr(big1, little1, (size_t)11));
-    printf("%s\n", strnstr(big1, little1, (size_t)11));
+    printf("%s\n", ft_strnstr(big1, little1, 11));
+    printf("%s\n", strnstr(big1, little1, 11));
     printf("\nTest 3 après aiguille\n\n");
-    printf("%s\n", ft_strnstr(big1, little1, (size_t)18));
-    printf("%s\n", strnstr(big1, little1, (size_t)18));
+    printf("%s\n", ft_strnstr(big1, little1, 18));
+    printf("%s\n", strnstr(big1, little1, 18));
     printf("\nTest 4 indice 0\n\n");
-    printf("%s\n", ft_strnstr(big1, little1, (size_t)0));
-    printf("%s\n", strnstr(big1, little1, (size_t)0));
+    printf("%s\n", ft_strnstr(big1, little1, 0));
+    printf("%s\n", strnstr(big1, little1, 0));
     printf("\nTest 5 si big vide\n\n");
-    printf("%s\n", ft_strnstr(big2, little1, (size_t)18));
-    printf("%s\n", strnstr(big2, little1, (size_t)18));
+    printf("%s\n", ft_strnstr(big2, little1, 18));
+    printf("%s\n", strnstr(big2, little1, 18));
     printf("\nTest 6 si little vide\n\n");
-    printf("%s\n", ft_strnstr(big1, little2, (size_t)18));
-    printf("%s\n", strnstr(big1, little2, (size_t)18));
+    printf("%s\n", ft_strnstr(big1, little2, 18));
+    printf("%s\n", strnstr(big1, little2, 18));
     // printf("\nTest 7 si big NULL\n\n");
-	// printf("%s\n", ft_strnstr(NULL, little1, (size_t)5));
-	// printf("%s\n", strnstr(NULL, little1, (size_t)5));
+	// printf("%s\n", ft_strnstr(NULL, little1, 5));
+	// printf("%s\n", strnstr(NULL, little1, 5));
 	// printf("\nTest 8 si little NULL\n\n");
-	// printf("%s\n", ft_strnstr(big1, NULL, (size_t)5));
-	// printf("%s\n\n", strnstr(big1, NULL, (size_t)5));
+	// printf("%s\n", ft_strnstr(big1, NULL, 5));
+	// printf("%s\n\n", strnstr(big1, NULL, 5));
 }
+*/
 
 void    test_strrchr(void)
 {
@@ -942,7 +945,7 @@ void    test_toupper(void)
     printf("%d\n", toupper(126));
 }
 
-int     main(void)
+int	main(void)
 {
 	// test_atoi();
 	// test_bzero();
@@ -964,16 +967,17 @@ int     main(void)
 	// test_strdup();
 	// test_striteri();
 	// test_strjoin();
-	// test_strlcat();
-	// test_strlcpy();
+	// test_strlcat(); ***
+	// test_strlcpy(); ***
 	// test_strlen();
 	// test_strmapi();
 	// test_strncmp();
-	// test_strnstr();
+	// test_strnstr(); ***
 	// test_strrchr();
 	// test_strtrim();
 	// test_substr();
 	// test_tolower();
 	// test_toupper();
+
 	return (0);
 }
