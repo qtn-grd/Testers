@@ -1,49 +1,54 @@
 #include <stdio.h>
 #include "ft_printf.h"
 
-void	test_oldone(void)
+void	test_affich(void)
 {
 	char	character = 'A';
+    char    nul = '\0';
 	char	*string = "premier";
 	int		integer = 0;
 	int		decimal = 4;
 	int		num = 255; 
 	int		num2 = 42;
 
+    printf("\n\n~ ~ ~ TESTS d'affichages multiples sans retours de valeurs ~ ~ ~\n\n");
+
+
 	printf("\n\"%c\" : Faisons en étape \"%i\" un \"%s\" essai.\n", character, integer, string);
 	ft_printf("\"%c\" : Faisons en étape \"%i\" un \"%s\" essai.\n", character, integer, string);
 
-	printf("\n");
-	ft_printf("\n");
+	ft_printf("\n\n");
 
 	printf("B : \"%p\" est l'adresse de \"%s\", la fonction gère les entiers comme \"%d\".\n", string, string, decimal);
 	ft_printf("B : \"%p\" est l'adresse de \"%s\", la fonction gère les entiers comme \"%d\".\n", string, string, decimal);
     
-	ft_printf("\n");
-	ft_printf("\n");
-
-	printf("C : Vérifions aussi les hexa avec \"%x\" ou \"%x\" comme lowercase et \"%X\" ou \"%X\" comme uppercase.\n", num, num2, num, num2);
-	ft_printf("C : Vérifions aussi les hexa avec \"%x\" ou \"%x\" comme lowercase et \"%X\" ou \"%X\" comme uppercase.\n\n\n", num, num2, num, num2);
-
-	printf("D : Voici pour le cas du \"%%\".");
-	printf("\n");
-	ft_printf("D : Voici pour le cas du \"%%\".");
 	ft_printf("\n\n");
 
-	printf("\nE : Si on met une mauvaise lettre juste après le \"%%\" comme %%k avec printf.\n");
-	ft_printf("E : Si on met une mauvaise lettre juste après le \"%%\" comme %%k avec ft_printf.\n");
+	printf("C : Vérifions les hexa avec \"%x\" ou \"%x\" comme lowercase et \"%X\" ou \"%X\" comme uppercase.\n", num, num2, num, num2);
+	ft_printf("C : Vérifions les hexa avec \"%x\" ou \"%x\" comme lowercase et \"%X\" ou \"%X\" comme uppercase.\n\n\n", num, num2, num, num2);
 
-	printf("\n\nF : Reste le cas de la chaîne vide -> \"%s\".\n", "");
-	ft_printf("F : Reste le cas de la chaîne vide -> \"%s\".\n", "");
+	printf("D : Cela marche aussi avec un caractère nul \"%c\" au milieu, et un pourcentage en fin de string \"%%\".", nul);
+	printf("\n");
+	ft_printf("D : Cela marche aussi avec un caractère nul \"%c\" au milieu, et un pourcentage en fin de string \"%%\".", nul);
+	ft_printf("\n\n");
 
-	// ft_printf("G : Comportement non défini (hors projet)");
+	printf("\nE : Si on met une mauvaise lettre juste après le \"%%\" comme %%k.\n");
+	ft_printf("E : Si on met une mauvaise lettre juste après le \"%%\" comme %%k.\n");
+
+	printf("\nF : La dose de \"%%\" : %%%% %% %%%%%% en milieu de string.");
+	ft_printf("\nF : La dose de \"%%\" : %%%% %% %%%%%% en milieu de string.\n");
+
+    printf("\n\n\nG : Un sacré bordel : %d %s %c %p %X %% %u %x\n", -42, "OMG", '\n', "abc", 999, 42, 255);
+    ft_printf("\nG : Un sacré bordel : %d %s %c %p %X %% %u %x\n", -42, "OMG", '\n', "abc", 999, 42, 255);
+
+	// ft_printf("UNDEFINED : -1 sur cluster, segfault sur macbook");
 	// printf("%d\n", printf(NULL));
 	// ft_printf("%d\n", ft_printf(NULL));
 }
 
 void    test_cu(void)
 {
-    printf("\n\nTESTS des %%c et %%u :\n\n");
+    printf("\n\n~ ~ ~ TESTS des %%c et %%u ~ ~ ~\n\n");
 
     printf("\n\tValeurs testees = a, \\t et \\0 \n\n");
 
@@ -81,7 +86,7 @@ void    test_cu(void)
 
 void    test_di(void)
 {
-    printf("\n\nTESTS des %%d et %%i :\n\n");
+    printf("\n\n~ ~ ~ TESTS des %%d et %%i ~ ~ ~\n\n");
 
     int n1 = 0;
     int n2 = 42;
@@ -133,7 +138,7 @@ void    test_di(void)
 
 void    test_s(void)
 {
-    printf("\n\nTESTS des %%s :\n\n");
+    printf("\n\n~ ~ ~ TESTS des %%s ~ ~ ~\n\n");
 
     char *str_empty = "";
     char *str_null = NULL;
@@ -177,7 +182,7 @@ void    test_s(void)
 
 void    test_p(void)
 {
-    printf("\n\nTESTS des %%p :\n\n");
+    printf("\n\n~ ~ ~ TESTS des %%p ~ ~ ~\n\n");
 
     int x = 42;
     int *ptr = &x;
@@ -218,7 +223,7 @@ void    test_p(void)
 
 void    test_hexa(void)
 {
-    printf("\n\nTESTS des %%x et %%X :\n\n");
+    printf("\n\n~ ~ ~ TESTS des %%x et %%X ~ ~ ~\n\n");
 
     int num1 = 42;
     int num2 = 0;
@@ -279,12 +284,7 @@ int main(void)
 {
     printf("\n\n\t\tTESTS de la FT_PRINTF\n\n");
 
-    printf("\n\n\tTESTS BASIQUES\n\n");
-
-    test_oldone();
-
-    printf("\n\n\n\tTESTS SUPPLEMENTAIRES\n");
-
+    test_affich();
     test_cu();
     test_di();
     test_s();
