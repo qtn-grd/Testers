@@ -28,12 +28,15 @@ void	test_oldone(void)
 	printf("D : Voici pour le cas du \"%%\".");
 	printf("\n");
 	ft_printf("D : Voici pour le cas du \"%%\".");
-	ft_printf("\n");
-	
-	printf("\n\nE : Reste le cas de la chaîne vide -> \"%s\".\n", "");
-	ft_printf("E : Reste le cas de la chaîne vide -> \"%s\".\n", "");
+	ft_printf("\n\n");
 
-	// ft_printf("E : Comportement non défini (hors projet)");
+	printf("\nE : Si on met une mauvaise lettre juste après le \"%%\" comme %%k avec printf.\n");
+	ft_printf("E : Si on met une mauvaise lettre juste après le \"%%\" comme %%k avec ft_printf.\n");
+
+	printf("\n\nF : Reste le cas de la chaîne vide -> \"%s\".\n", "");
+	ft_printf("F : Reste le cas de la chaîne vide -> \"%s\".\n", "");
+
+	// ft_printf("G : Comportement non défini (hors projet)");
 	// printf("%d\n", printf(NULL));
 	// ft_printf("%d\n", ft_printf(NULL));
 }
