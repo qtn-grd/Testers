@@ -7,6 +7,7 @@
 #include <stdint.h>
 #include <stdlib.h>
 #include <string.h>
+#include <bsd/string.h>
 
 void    test_atoi(void)
 {       
@@ -607,7 +608,7 @@ void    test_strjoin(void)
     printf("%s\n", ft_strjoin(str4, str2));
 }
 
-/*void    test_strlcat(void)
+void    test_strlcat(void)
 {
     char    str1[20] = "ZZZZZZZ";
     char    str2[20] = "ZZZZZZZ";
@@ -694,7 +695,7 @@ void    test_strlcpy(void)
 //  printf("%zu\n", i);
 //  printf("%zu\n", j);
 }
-*/
+
 
 void	test_strlen(void)
 {
@@ -786,7 +787,7 @@ void    test_strncmp(void)
 	// printf("%d\n", ft_strncmp(NULL, str2, 5));
     // printf("%d\n\n", strncmp(NULL, str2, 5));
 }
-/*
+
 void    test_strnstr(void)
 {
     char    *big1 = "C'est la fête ce soir";
@@ -821,7 +822,7 @@ void    test_strnstr(void)
 	// printf("%s\n", ft_strnstr(big1, NULL, 5));
 	// printf("%s\n\n", strnstr(big1, NULL, 5));
 }
-*/
+
 
 void    test_strrchr(void)
 {
@@ -967,12 +968,12 @@ int	main(void)
 	// test_strdup();
 	// test_striteri();
 	// test_strjoin();
-	// test_strlcat(); ***
-	// test_strlcpy(); ***
+	// test_strlcat();
+	// test_strlcpy();
 	// test_strlen();
 	// test_strmapi();
 	// test_strncmp();
-	// test_strnstr(); ***
+	test_strnstr();
 	// test_strrchr();
 	// test_strtrim();
 	// test_substr();
