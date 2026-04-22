@@ -1,77 +1,93 @@
-# MANDATORY
+# PUSH_SWAP
+
+## MANDATORY 📌
+
+### Program 🖥️
+
+- with no arguments
+
+- with a list of one valid element
+- with a list of one invalid argument
+- with a list of two sorted elements
+- with a list of two unsorted elements
+
+- with a list mixing different positive and negative integers
+- with a list containing duplicate integers
+    including '0' and '-0'
+
+- with a list containing '+' before positive numbers
+- with a list containing both '+' and '-' before an integer
+
+- with a list containing an integer exceeding limits
+- with a list containing a float
+- with a list containing an integer followed by an invalid character
+- with a list of multiple strings
+    valid or not
+- with a list mixing integers and numeric strings
 
 
-## Programme
+### Flags 🚩
 
-- sans aucun argument
-- sur liste d'un élément valide
-- sur liste d'un argument invalide
-- sur liste de deux éléments triés
-- sur liste de deux éléments non-triés
-- sur liste mélangeant différents ints positifs et négatifs
-    - et en commençant par un int
-- sur liste avec doublons de int
-    - y compris 0 et -0
-- sur liste avec des + devant les positifs
-- sur liste avec + et - devant un int
-- sur liste avec un int qui dépasse les limites
-- sur liste avec un float
-- sur liste avec un int qui dépasse par un autre caractère
-- sur liste de plusieurs strings
-    - valides ou non
-- sur liste mélangeant ints et strings de int
+- with one or two flags and no arguments
+- with duplicate flags _(or more)_
+- with two contradictory flags
+- with two flags stuck together
+- with only the bench flag
+- with adaptive and three disorder levels: min, medium, max
+- with a flag passed as a string
 
-## Flags
-
-- avec un ou deux flags et pas d'arguments
-- avec un flag en double voire plus
-- avec deux flags contradictoires
-- avec deux flags collés
-- avec un flag bench seul
-- avec adaptive et trois listes de disorders min, moyen et max
-- avec un flag en string
-- vérifier si différence avec/sans flag adaptive
-- vérifier le comportement selon le placement des flags
-
-## Valgrind
-
-- sur programme seul
-- sur programme & bench
-- sur programme & selective flag
-- sur liste déja triée
-- sur liste à trier mais valide
-- sur liste à trier mais invalide
-
-## Algos
-
-- vérifier efficacité de chaque flag sur liste
-    - de deux
-    - de trois
-    - de cinq
-- vérifier l'efficacité de liste de 100, 500, 1000
-    - sans flag
-    - avec chaque flag
+check differences with/without the adaptive flag
+check behavior depending on flag placement
 
 
-# BONUS
+### Valgrind 🔬
 
-## Programme
+- on the program alone
+- on program & bench
+- on program & selective flag
+- on an already sorted list
+- on a valid list to sort
+- on an invalid list to sort
 
-- vérifier les bons tris de listes
-    - déjà triée initialement
-    - bien triée manuellement
-    - mal triée manuellement
-- vérifier comportement face aux flags
-- vérifier comportement face aux arguments invalides
-- comparer au checker_linux
 
-## Compilation
+### Algorithms 📊
 
-- possibilité de n'avoir que ./push_swap OU ./checker
+- check efficiency of each flag on lists:
+    of size two
+    of size three
+    of size five
+- check efficiency on lists
+    of 100
+    of 500
+    of 1000
 
-## Valgrind
+- without flags
+- with each flag
 
-- sur liste déja triée, aucune opération
-- sur liste à bien trier
-- sur liste à mal trier
-- face à une opération inexistante
+
+## BONUS ✨
+
+### Program 🖥️
+
+- verify correct sorting of lists:
+    already sorted initially
+    correctly sorted manually
+    incorrectly sorted manually
+
+- check behavior with flags
+- check behavior with invalid arguments
+- compare with checker_linux
+
+
+### Compilation ⚙️
+
+- ability to have only `./push_swap` OR `./checker`
+
+
+### Valgrind 🔬
+
+- on an already sorted list _no operations_
+- on a properly sortable list
+- on a poorly sorted list
+
+- with a non-existent operation
